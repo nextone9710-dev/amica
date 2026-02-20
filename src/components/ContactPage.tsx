@@ -218,7 +218,7 @@ export default function ContactPage() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} method="POST" data-netlify="true" className="space-y-5">
+                  <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" data-netlify-honeypot="bot-field" className="space-y-5">
                     <input type="hidden" name="form-name" value="contact" />
                     {/* Name Row */}
                     <div className="grid grid-cols-2 gap-4">
