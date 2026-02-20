@@ -58,7 +58,7 @@ export default function Hero() {
           </p>
           {/* Central CTA */}
           <a
-            href="#contact"
+            href="/products"
             className="inline-block mt-6 bg-primary hover:bg-primary-dark text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg shadow-primary/30 transition-transform duration-200 hover:scale-105 animate-[fadeSlideUp_0.8s_ease_0.6s_both]"
           >
             EXPLORE COLLECTION
