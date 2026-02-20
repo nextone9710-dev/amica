@@ -142,7 +142,7 @@ export default function QualityAssurance() {
 
               {/* CTA Button */}
               <Link
-                to="/#contact"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors uppercase tracking-wide"
               >
                 Free Quote | Book Appointment
@@ -323,7 +323,7 @@ export default function QualityAssurance() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/#contact"
+              to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Request a Quote

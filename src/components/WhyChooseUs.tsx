@@ -308,7 +308,7 @@ export default function WhyChooseUs() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/#contact"
+              to="/contact"
               className="inline-flex items-center justify-center px-10 py-4 bg-white text-gray-900 font-medium tracking-wide hover:bg-gray-100 transition-all duration-300"
             >
               Get Free Quote
