@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { companyInfo } from '../data/siteData';
 import heroVideo from '../assets/videos/demo.mp4';
 import heroBg from '../assets/images/background.png';
@@ -57,12 +58,12 @@ export default function Hero() {
             And it's a uniform.
           </p>
           {/* Central CTA */}
-          <a
-            href="/products"
+          <Link
+            to="/products"
             className="inline-block mt-6 bg-primary hover:bg-primary-dark text-white text-lg px-8 py-4 rounded-lg font-bold shadow-lg shadow-primary/30 transition-transform duration-200 hover:scale-105 animate-[fadeSlideUp_0.8s_ease_0.6s_both]"
           >
             EXPLORE COLLECTION
-          </a>
+          </Link>
         </div>
 
         {/* Scroll indicator */}
