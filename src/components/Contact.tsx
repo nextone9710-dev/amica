@@ -16,37 +16,22 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     const body = new FormData();
-    body.append('wpforms[fields][1][first]', formData.firstName);
-    body.append('wpforms[fields][1][last]', formData.lastName);
-    body.append('wpforms[fields][2]', formData.email);
-    body.append('wpforms[fields][5]', formData.phone);
-    body.append('wpforms[fields][6]', '');
-    body.append('wpforms[fields][4]', '');
-    body.append('wpforms[fields][3]', formData.message);
-    body.append('wpforms[id]', '440');
-    body.append('page_title', 'Contact');
-    body.append('page_url', 'https://amice.co.uk/contact/');
-    body.append('page_id', '275');
-    body.append('wpforms[post_id]', '275');
-    body.append('wpforms[submit]', 'wpforms-submit');
-    body.append('wpforms[token]', '');
-    body.append('action', 'wpforms_submit');
-    body.append('start_timestamp', String(Math.floor(Date.now() / 1000)));
-    body.append('end_timestamp', String(Math.floor(Date.now() / 1000)));
+    body.append('form-name', 'contact');
+    body.append('firstName', formData.firstName);
+    body.append('lastName', formData.lastName);
+    body.append('email', formData.email);
+    body.append('phone', formData.phone);
+    body.append('message', formData.message);
 
     try {
-      const response = await fetch('/wp-admin/admin-ajax.php', {
+      const response = await fetch('/', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/javascript, */*; q=0.01',
-          'X-Requested-With': 'XMLHttpRequest',
-        },
         body,
       });
 
@@ -153,7 +138,8 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} method="POST" data-netlify="true" className="space-y-6">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="contact-firstName" className="block text-sm font-medium text-gray-700 mb-2">
