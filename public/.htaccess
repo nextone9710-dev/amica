@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve contact.php as a real PHP file (do not rewrite)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# For everything else (React Router routes), serve index.html
+RewriteRule ^ /index.html [L]

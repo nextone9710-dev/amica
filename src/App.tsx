@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import ValueSteps from './components/ValueSteps'
 import AboutUs from './components/AboutUs'
 import Products from './components/Products'
 import Testimonials from './components/Testimonials'
@@ -15,6 +16,7 @@ function HomePage() {
     <>
       <Hero />
       <Testimonials />
+      <ValueSteps />
       <Contact />
     </>
   )

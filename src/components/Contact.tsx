@@ -22,7 +22,6 @@ export default function Contact() {
     setSubmitStatus('idle');
 
     const body = new FormData();
-    body.append('form-name', 'contact');
     body.append('firstName', formData.firstName);
     body.append('lastName', formData.lastName);
     body.append('email', formData.email);
@@ -30,7 +29,7 @@ export default function Contact() {
     body.append('message', formData.message);
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/contact.php', {
         method: 'POST',
         body,
       });
@@ -138,8 +137,7 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" data-netlify-honeypot="bot-field" className="space-y-6">
-                <input type="hidden" name="form-name" value="contact" />
+              <form name="contact" onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="contact-firstName" className="block text-sm font-medium text-gray-700 mb-2">
