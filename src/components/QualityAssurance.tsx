@@ -29,7 +29,7 @@ const qualityObjectives = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    value: '48',
+    value: '0',
     unit: 'h',
     label: 'Response Time',
   },
@@ -39,7 +39,7 @@ const qualityObjectives = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    value: '25',
+    value: '10',
     unit: '+',
     label: 'Countries Served',
   },
@@ -136,7 +136,7 @@ export default function QualityAssurance() {
               {/* Description */}
               <div className="border-l-4 border-primary pl-6 mb-8">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Quality and ethics define {companyInfo.name} Pvt Ltd. From fabric sourcing to final delivery, we ensure every uniform meets the highest professional standards. "Delivering trust, reliability, and consistent quality is at the heart of everything we do." Whether supplying national brands, schools, hospitals, or local businesses, our goal is to build long-term partnerships based on reliability and service excellence.
+                  Quality and ethics define {companyInfo.name} Pvt Ltd. From fabric sourcing to final <strong>door-to-door delivery</strong>, we ensure every <strong>custom uniform</strong> meets the highest professional standards. "Delivering trust, reliability, and consistent quality is at the heart of everything we do." Whether supplying national brands, schools, hospitals, or local businesses, our goal is to build long-term partnerships based on reliability and service excellence.
                 </p>
               </div>
 
@@ -190,9 +190,9 @@ export default function QualityAssurance() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
                   {obj.icon}
                 </div>
-                <div className="flex items-baseline justify-center gap-1 mb-2">
+                <div className="flex items-baseline justify-center gap-0.5 mb-2">
                   <span className="text-5xl font-black text-gray-900">{obj.value}</span>
-                  <span className="text-2xl font-bold text-primary">{obj.unit}</span>
+                  <span className="text-3xl font-black text-gray-900">{obj.unit}</span>
                 </div>
                 <p className="text-gray-600 font-medium">{obj.label}</p>
               </div>
