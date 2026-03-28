@@ -22,7 +22,7 @@ const values = [
       </svg>
     ),
     title: 'Quality You Can Trust',
-    description: 'Top-grade fabrics and expert craftsmanship, ISO certified at every step.',
+    description: 'Top-grade fabrics and expert craftsmanship you can trust.',
   },
   {
     icon: (
@@ -30,8 +30,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
       </svg>
     ),
-    title: 'Tailored to Your Brand',
-    description: 'Custom branding, embroidery, and design options that carry your identity.',
+    title: 'Tailored to Your Needs',
+    description: <>Custom branding and <strong>logo embroidery</strong> design options for your needs.</>,
   },
   {
     icon: (
@@ -39,8 +39,8 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: 'Always On Time',
-    description: 'Reliable delivery schedules — we never miss a deadline.',
+    title: 'Reliable',
+    description: 'On-time delivery schedules, every single time.',
   },
   {
     icon: (
@@ -49,15 +49,15 @@ const values = [
       </svg>
     ),
     title: 'Value for Money',
-    description: 'Factory-direct pricing without compromising on quality.',
+    description: 'Competitive pricing without compromising quality.',
   },
 ];
 
 const compliancePoints = [
-  'Regular supplier assessments and audits',
-  'Staff training to prevent modern slavery risks',
-  'Clear reporting mechanisms for concerns',
-  'Ethical standards in all supplier contracts',
+  'Conduct regular supplier assessments and audits.',
+  'Provide training for staff to prevent modern slavery risks.',
+  'Maintain clear reporting mechanisms for concerns.',
+  'Embed ethical standards in all supplier contracts.',
 ];
 
 export default function AboutUs() {
@@ -140,7 +140,7 @@ export default function AboutUs() {
             </h2>
             <div className="w-12 h-[2px] bg-primary mx-auto mb-6 rounded-full" />
             <p className="text-gray-500 text-lg leading-relaxed">
-              Our mission is simple: provide uniforms that reflect your brand's values and leave a lasting impression. We build long-term partnerships through personalized service, competitive pricing, and reliable delivery.
+              With years of experience in the garment industry, {companyInfo.name} delivers exceptional <strong>custom uniforms</strong> that combine style, comfort, and durability. Our mission is simple: to provide premium <strong>UK uniform solutions</strong> that reflect your brand's values and leave a lasting impression. We focus on building long-term partnerships with our clients by offering personalized service, competitive pricing, and reliable on-time delivery—every single time.
             </p>
           </div>
 
@@ -197,10 +197,10 @@ export default function AboutUs() {
               <div className="w-12 h-[2px] bg-primary mb-6 rounded-full" />
 
               <p className="text-gray-600 leading-relaxed mb-4">
-                <span className="font-semibold text-gray-900">Statement from the People Director:</span> {companyInfo.name} Ltd takes its responsibilities under the Modern Slavery Act 2015 extremely seriously. We are committed to identifying, understanding, and addressing potential modern slavery risks across our operations and supply chain.
+                <span className="font-semibold text-gray-900">Statement from the People Director:</span> {companyInfo.name} Ltd takes its responsibilities under the Modern Slavery Act 2015 extremely seriously. This statement outlines our commitment to identifying, understanding, and addressing potential modern slavery risks across our operations and <strong>bulk uniform production</strong> supply chain.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                We are dedicated to ensuring that all workers involved in our business and supply chain are treated fairly, with dignity, and in safe working conditions.
+              <p className="text-gray-600 leading-relaxed mb-4">
+                At {companyInfo.name}, we are dedicated to ensuring that all workers involved in our business and supply chain are treated fairly, with dignity, and in safe working conditions. To achieve this:
               </p>
 
               {/* Compliance checklist */}
@@ -220,7 +220,7 @@ export default function AboutUs() {
               <div className="bg-white border border-gray-200 rounded-xl p-6">
                 <h3 className="font-bold text-gray-900 mb-2">Management Accountability</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  Our senior management team is accountable for enforcing these standards within their departments and maintaining supplier relationships that reflect {companyInfo.name}'s commitment to ethical practices. We aim to build a transparent, responsible, and sustainable business ecosystem.
+                  Our senior management team is accountable for enforcing these standards within their departments and for maintaining supplier relationships that reflect {companyInfo.name}'s commitment to ethical practices. By taking these steps, we aim to build a transparent, responsible, and sustainable business ecosystem that respects people, communities, and the environment.
                 </p>
               </div>
             </div>
