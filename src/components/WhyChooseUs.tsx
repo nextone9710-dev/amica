@@ -124,8 +124,40 @@ export default function WhyChooseUs() {
             <span className="block font-semibold italic">Uniforms</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light">
-            We believe a uniform is a strategic tool for smarter workplaces — enhancing safety, boosting productivity, and strengthening your brand.
+            Where every thread speaks professionalism — uniforms that enhance safety, boost productivity, and strengthen your brand.
           </p>
+        </div>
+      </section>
+
+      {/* Why Choose Us Content */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+            {/* Left column */}
+            <div className="flex flex-col">
+              <p className="text-primary tracking-[0.2em] uppercase text-sm font-medium mb-4">
+                Why Choose Us
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-5 leading-tight">
+                We are here to help your uniform solutions
+              </h2>
+              <div className="w-12 h-1 bg-primary mb-7" />
+              <p className="text-gray-600 text-lg leading-relaxed">
+                At {companyInfo.name}, we believe that a <strong>custom UK uniform</strong> is more than just clothing — it is a strategic tool for smarter workplaces. Our <strong>corporate and workwear uniforms</strong> are meticulously designed to enhance operational efficiency, ensure workplace safety, and boost employee productivity. By combining durability, comfort, and functionality, they allow staff to perform at their best while maintaining a professional and cohesive appearance.
+              </p>
+            </div>
+
+            {/* Right column — card with border accent */}
+            <div className="bg-white border-l-4 border-primary rounded-r-xl shadow-sm p-8 flex flex-col gap-6">
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {companyInfo.name} <strong>custom uniforms</strong> also foster team cohesion and a sense of pride, creating a positive and motivating work environment. We understand that smarter living at work means balancing safety, comfort, and efficiency, which is why every design reflects thoughtful attention to employee needs, industry standards, and brand identity.
+              </p>
+              <div className="w-full h-px bg-gray-100" />
+              <p className="text-gray-600 text-lg leading-relaxed">
+                When you choose {companyInfo.name}, you're investing in <strong>premium uniforms</strong> that do more than look professional — they support smarter workflows, empower teams, and strengthen your organisation's reputation. With {companyInfo.name}, your workplace becomes safer, more productive, and truly aligned with your business goals.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
