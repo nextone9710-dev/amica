@@ -6,7 +6,7 @@ const steps = [
       </svg>
     ),
     title: "Uniform Design",
-    description: "We craft unique, professional uniform designs tailored to each client's brand identity. Our expert design team ensures comfort, style, and functionality, making uniforms stand out while supporting daily performance.",
+    description: <>We craft unique, professional <strong>custom uniform designs</strong> tailored to each client's brand identity. Our expert design team ensures comfort, style, and functionality, making uniforms stand out while supporting daily performance.</>,
   },
   {
     icon: (
@@ -15,7 +15,7 @@ const steps = [
       </svg>
     ),
     title: "Prototype Sample",
-    description: "Before bulk production, we create precise prototype samples for client approval. This process guarantees accurate sizing, fabric quality, and design details, minimizing risks and ensuring complete satisfaction with the final product.",
+    description: <>Before <strong>bulk uniform production</strong>, we create precise prototype samples for client approval. This process guarantees accurate sizing, fabric quality, and design details, minimizing risks and ensuring complete satisfaction with the final product.</>,
   },
   {
     icon: (
@@ -24,7 +24,7 @@ const steps = [
       </svg>
     ),
     title: "Bulk Production",
-    description: "With advanced manufacturing facilities in Bangladesh, we manage bulk uniform production efficiently. Strict quality control ensures every garment meets international standards, delivering consistent quality, durability, and timely completion of orders.",
+    description: <>With advanced manufacturing facilities in Bangladesh, we manage <strong>bulk uniform production</strong> efficiently. Strict quality control ensures every garment meets international standards, delivering consistent quality, durability, and timely completion of orders.</>,
   },
   {
     icon: (
@@ -33,7 +33,7 @@ const steps = [
       </svg>
     ),
     title: "Door to Door Delivery",
-    description: "We provide hassle-free door-to-door delivery across the UK. From packaging to logistics, our reliable distribution ensures uniforms arrive safely, on time, and ready to wear, making the process smooth and stress-free.",
+    description: <>We provide hassle-free <strong>door-to-door uniform delivery across the UK</strong>. From packaging to logistics, our reliable distribution ensures uniforms arrive safely, on time, and ready to wear, making the process smooth and stress-free.</>,
   },
 ];
 
