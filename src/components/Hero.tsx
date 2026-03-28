@@ -76,6 +76,15 @@ export default function Hero() {
       </div>
     </section>
 
+    {/* Intro Text Section */}
+    <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto text-center">
+        <p className="text-white/80 text-lg md:text-xl leading-relaxed">
+          At <span className="text-primary font-semibold">Amice Pvt Ltd.</span> we know that a <strong className="text-white font-bold">custom uniform in the UK</strong> is more than just clothing it's a symbol of identity, professionalism, and pride. That's why we design and supply high quality <strong className="text-white font-bold">custom uniforms</strong> tailored to your needs. From <strong className="text-white font-bold">corporate wear</strong> to customized branded apparel and <strong className="text-white font-bold">industrial workwear</strong>, we help you create a polished and professional look for your team, every time.
+        </p>
+      </div>
+    </section>
+
     {/* Video Section */}
     <section className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">

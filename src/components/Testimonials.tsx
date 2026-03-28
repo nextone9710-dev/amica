@@ -110,11 +110,8 @@ export default function Testimonials() {
       {/* Header */}
       <div className="relative text-center mb-10 px-4">
         <h2 className="text-3xl md:text-5xl font-black text-white tracking-wide mb-3">
-          TESTIMONIALS
+          OUR CUSTOMER SPEAK ABOUT US
         </h2>
-        <p className="text-base md:text-lg text-white/50 font-light">
-          What Our Clients Say About Us?
-        </p>
         <div className="w-12 h-[2px] bg-primary mx-auto mt-5 rounded-full" />
       </div>
 

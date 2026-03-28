@@ -94,7 +94,7 @@ export const processSteps = [
 export const testimonials = [
   {
     name: "Ganesh",
-    content: "Outstanding quality for our staff uniforms. The chef jackets are durable, breathable, and look incredibly professional. Amice delivered perfect embroidery design and on-time delivery. Highly recommended!",
+    content: "Outstanding quality for our staff uniforms. The chef jackets are durable, breathable, and look incredibly professional. Amice delivered perfect logo embroidery services and on-time delivery. Highly recommended!",
     rating: 5,
   },
   {
@@ -104,12 +104,12 @@ export const testimonials = [
   },
   {
     name: "Sakthi Supermarkets",
-    content: "We've been working with Amice for 2 years. Their consistency in quality and ability to handle large orders (500+ uniforms) makes them our go-to supplier. The customer service team is brilliant!",
+    content: "We've been working with Amice for 2 years. Their consistency in quality and ability to handle large orders (500+ bulk uniforms) makes them our go-to supplier. The customer service team is brilliant!",
     rating: 5,
   },
   {
     name: "Veenas",
-    content: "Very professional and accommodating. They created custom aprons and shirts for our staff with beautiful embroidery of our logo. The turnaround time was impressive - only 3 weeks from order to delivery in Leeds.",
+    content: "Very professional and accommodating. They created custom aprons and shirts for our staff with beautiful embroidery of our logo. The turnaround time was impressive - only 3 weeks from order to door-to-door delivery in Leeds.",
     rating: 4.5,
   },
   {
@@ -119,7 +119,7 @@ export const testimonials = [
   },
   {
     name: "POLSKI",
-    content: "Reliable manufacturing partner for our retail staff uniforms. Great attention to detail, especially with our logo embroidery. Competitive pricing, and they handled our seasonal bulk orders efficiently. Highly recommend for UK businesses!",
+    content: "Reliable manufacturing partner for our retail staff uniforms. Great attention to detail, especially with our logo embroidery. Competitive pricing, and they handled our seasonal bulk uniform orders efficiently. Highly recommend for UK businesses!",
     rating: 5,
   },
 ];
