@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import healthcarePdf from "../assets/documents/healthcare.pdf?url";
 import { Link } from "react-router-dom";
 
 // Import local product images
@@ -49,15 +50,23 @@ const offerings = [
   },
   {
     title: "Industrial Workwear",
-    description:
-      "High-visibility, durable uniforms for manufacturing, construction, and logistics.",
+    description: (
+      <>
+        Amice Industries Workwear specializes in high-performance <strong>safety wear</strong> and <strong>industrial uniforms</strong> designed to protect workers while ensuring comfort and durability. We provide a wide range of <strong>industrial workwear solutions</strong> including hi-visibility clothing, flame-resistant apparel, coveralls, jackets, and protective gear tailored to meet international safety standards. Every product is crafted with precision, using durable fabrics and advanced manufacturing techniques to withstand demanding environments. Trusted by industries across construction, logistics, healthcare, and manufacturing, Amice Industries guarantees reliable protection without compromising on fit or style. Our mission is to keep your workforce safe, comfortable, and professionally represented at all times.
+      </>
+    ),
     image: industrialImg,
   },
   {
     title: "Healthcare Uniforms",
-    description:
-      "Scrubs, tunics, and medical wear designed for comfort and practicality.",
+    description: (
+      <>
+        Amice Nurse Uniform is designed with care, comfort, and functionality in mind, ensuring healthcare professionals can perform their duties with ease and confidence. Our <strong>nurse uniforms and medical scrubs</strong> are made from high quality, breathable fabrics that provide durability, easy maintenance, and all-day comfort. With customisable designs, we offer <strong>scrubs, tunics, lab coats, and medical workwear</strong> tailored to meet hospital and clinic standards. Every detail from fit to fabric choice is carefully crafted to support the demanding routines of nurses while maintaining a professional appearance. Amice ensures healthcare uniforms that combine practicality, hygiene, and style, empowering nurses to deliver the best patient care.
+      </>
+    ),
     image: healthcareImg,
+    downloadLink: healthcarePdf,
+    downloadLabel: "Download Healthcare Uniform Catalogue",
   },
   {
     title: "School Uniforms",
@@ -238,6 +247,18 @@ export default function Products() {
                   <p className="text-gray-600 text-lg leading-relaxed">
                     {offering.description}
                   </p>
+                  {offering.downloadLink && (
+                    <a
+                      href={offering.downloadLink}
+                      download={offering.downloadLabel}
+                      className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary text-white font-medium tracking-wide hover:bg-primary-dark transition-colors duration-300"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3" />
+                      </svg>
+                      {offering.downloadLabel}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
