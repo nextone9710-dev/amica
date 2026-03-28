@@ -17,6 +17,8 @@ import product11 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_20
 import product12 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_23_14-PM.png";
 import product13 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_25_57-PM.png";
 import product14 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_29_21-PM.png";
+import ashtonMale from "../assets/images/products/ashton_male.png";
+import ashtonFemale from "../assets/images/products/ashton_female.png";
 
 // Import category images
 import corporateImg from "../assets/images/Amice-Corporate-Uniform.jpg";
@@ -39,6 +41,8 @@ const previousWork = [
   { image: product12, alt: "Care worker tunic" },
   { image: product13, alt: "Server waistcoat" },
   { image: product14, alt: "Durable workwear jacket" },
+  { image: ashtonMale, alt: "Ashton male uniform" },
+  { image: ashtonFemale, alt: "Ashton female uniform" },
 ];
 
 const offerings = [
