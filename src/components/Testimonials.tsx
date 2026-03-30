@@ -1,29 +1,29 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { testimonials } from '../data/siteData';
+import { useState, useEffect, useCallback, useRef } from "react";
+import { testimonials } from "../data/siteData";
 
-import ganeshLogo from '../assets/images/partners/ganesh.png';
-import megamartLogo from '../assets/images/partners/megamart.webp';
-import shakthiLogo from '../assets/images/partners/shakthi.webp';
-import veenaLogo from '../assets/images/partners/veena.png';
-import aliBhavanLogo from '../assets/images/partners/alii bhavan.jpeg';
-import polskiLogo from '../assets/images/partners/polski.jpeg';
+import ganeshLogo from "../assets/images/partners/ganesh.png";
+import megamartLogo from "../assets/images/partners/megamart.webp";
+import shakthiLogo from "../assets/images/partners/shakthi.png";
+import veenaLogo from "../assets/images/partners/veena.png";
+import aliBhavanLogo from "../assets/images/partners/alii bhavan.jpeg";
+import polskiLogo from "../assets/images/partners/polski.jpeg";
 
 const partnerLogos: Record<string, string> = {
   Ganesh: ganeshLogo,
   MEGAMART: megamartLogo,
-  'Sakthi Supermarkets': shakthiLogo,
+  "Sakthi Supermarkets": shakthiLogo,
   Veenas: veenaLogo,
-  'ALI BHAVAN': aliBhavanLogo,
+  "ALI BHAVAN": aliBhavanLogo,
   POLSKI: polskiLogo,
 };
 
 const partnerRoles: Record<string, string> = {
-  Ganesh: 'Asian Supermarket',
-  MEGAMART: 'Retail Chain',
-  'Sakthi Supermarkets': 'Supermarket Group',
-  Veenas: 'Restaurant & Store',
-  'ALI BHAVAN': 'Restaurant',
-  POLSKI: 'Supermarket',
+  Ganesh: "Asian Supermarket",
+  MEGAMART: "Retail Chain",
+  "Sakthi Supermarkets": "Supermarket Group",
+  Veenas: "Restaurant & Store",
+  "ALI BHAVAN": "Restaurant",
+  POLSKI: "Supermarket",
 };
 
 function QuoteOpen({ className }: { className?: string }) {
@@ -57,7 +57,7 @@ export default function Testimonials() {
       setCurrentSlide(((index % totalSlides) + totalSlides) % totalSlides);
       setTimeout(() => setIsTransitioning(false), 500);
     },
-    [isTransitioning, totalSlides]
+    [isTransitioning, totalSlides],
   );
 
   const nextSlide = useCallback(() => {
@@ -88,14 +88,14 @@ export default function Testimonials() {
   return (
     <section
       className="relative py-24 overflow-hidden"
-      style={{ backgroundColor: '#121621' }}
+      style={{ backgroundColor: "#121621" }}
     >
       {/* Subtle background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(227,30,36,0.04) 0%, transparent 70%)',
+            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(227,30,36,0.04) 0%, transparent 70%)",
         }}
       />
 
@@ -124,7 +124,7 @@ export default function Testimonials() {
           {Object.entries(partnerLogos).map(([name, logo]) => (
             <div
               key={name}
-              className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center p-3 md:p-4 hover:bg-white/[0.12] hover:border-white/[0.2] transition-all duration-300 hover:scale-105"
+              className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-white border border-white/20 flex items-center justify-center p-1.5 hover:scale-105 transition-all duration-300 shadow-md"
             >
               <img
                 src={logo}
@@ -143,14 +143,14 @@ export default function Testimonials() {
           className="hidden md:block absolute left-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to right, #121621 0%, transparent 100%)',
+              "linear-gradient(to right, #121621 0%, transparent 100%)",
           }}
         />
         <div
           className="hidden md:block absolute right-0 top-0 bottom-0 w-24 lg:w-40 z-10 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to left, #121621 0%, transparent 100%)',
+              "linear-gradient(to left, #121621 0%, transparent 100%)",
           }}
         />
 
@@ -261,8 +261,8 @@ export default function Testimonials() {
             onClick={() => goToSlide(idx)}
             className={`rounded-full transition-all duration-300 ${
               idx === currentSlide
-                ? 'w-7 h-2 bg-primary'
-                : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                ? "w-7 h-2 bg-primary"
+                : "w-2 h-2 bg-white/20 hover:bg-white/40"
             }`}
             aria-label={`Go to testimonial ${idx + 1}`}
           />
@@ -278,7 +278,7 @@ function TestimonialCard({
   testimonial: (typeof testimonials)[number];
 }) {
   const logo = partnerLogos[testimonial.name];
-  const role = partnerRoles[testimonial.name] || 'Client';
+  const role = partnerRoles[testimonial.name] || "Client";
 
   return (
     <div className="relative group">
@@ -294,10 +294,10 @@ function TestimonialCard({
               key={star}
               className={`w-5 h-5 ${
                 star <= Math.floor(testimonial.rating)
-                  ? 'text-amber-400'
+                  ? "text-amber-400"
                   : testimonial.rating > star - 1
-                    ? 'text-amber-400/50'
-                    : 'text-white/10'
+                    ? "text-amber-400/50"
+                    : "text-white/10"
               }`}
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -334,9 +334,7 @@ function TestimonialCard({
             <p className="text-white font-bold text-base leading-tight truncate">
               {testimonial.name}
             </p>
-            <p className="text-white/50 text-sm leading-tight mt-1">
-              {role}
-            </p>
+            <p className="text-white/50 text-sm leading-tight mt-1">{role}</p>
           </div>
         </div>
 
