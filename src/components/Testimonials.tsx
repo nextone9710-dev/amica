@@ -308,9 +308,10 @@ function TestimonialCard({
         </div>
 
         {/* Testimonial text */}
-        <p className="text-white leading-[1.9] text-base md:text-lg mb-8">
-          "{testimonial.content}"
-        </p>
+        <p
+          className="text-white leading-[1.9] text-base md:text-lg mb-8 [&_strong]:font-bold [&_strong]:text-white"
+          dangerouslySetInnerHTML={{ __html: `"${testimonial.content}"` }}
+        />
 
         {/* Divider */}
         <div className="w-16 h-[2px] bg-primary/30 mb-6" />
