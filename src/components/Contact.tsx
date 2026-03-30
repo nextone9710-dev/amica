@@ -196,8 +196,18 @@ export default function Contact() {
                       id="contact-phone"
                       name="phone"
                       value={formData.phone}
-                      onChange={handleChange}
+                      onChange={(e) => {
+                        const numeric = e.target.value.replace(/[^0-9+\s\-()]/g, "");
+                        setFormData({ ...formData, phone: numeric });
+                      }}
+                      onKeyDown={(e) => {
+                        const allowed = ["Backspace", "Delete", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Home", "End", "+", "-", "(", ")", " "];
+                        if (!allowed.includes(e.key) && !/^\d$/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+                          e.preventDefault();
+                        }
+                      }}
                       required
+                      inputMode="numeric"
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition placeholder:text-xs placeholder:text-gray-300"
                       placeholder="+44 7xxx xxxxxx"
                     />

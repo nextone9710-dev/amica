@@ -457,8 +457,18 @@ export default function ContactPage() {
                           type="tel"
                           name="phone"
                           value={formData.phone}
-                          onChange={handleChange}
+                          onChange={(e) => {
+                            const numeric = e.target.value.replace(/[^0-9+\s\-()]/g, "");
+                            setFormData({ ...formData, phone: numeric });
+                          }}
+                          onKeyDown={(e) => {
+                            const allowed = ["Backspace", "Delete", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Home", "End", "+", "-", "(", ")", " "];
+                            if (!allowed.includes(e.key) && !/^\d$/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+                              e.preventDefault();
+                            }
+                          }}
                           required
+                          inputMode="numeric"
                           placeholder="+44 7xxx xxxxxx"
                           className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition text-gray-900 placeholder:text-gray-400"
                         />
