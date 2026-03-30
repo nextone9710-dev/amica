@@ -216,147 +216,137 @@ export default function ContactPage() {
               </p>
 
               {/* Company info panel */}
-              <div className="rounded-xl overflow-hidden border border-gray-200">
-                {/* Header strip */}
-                <div className="bg-secondary px-5 py-3">
-                  <p className="text-xs font-semibold text-white/70 uppercase tracking-widest">
-                    {companyInfo.name} Pvt. Ltd — Free Consulting
-                  </p>
+              <div className="bg-gray-50 rounded-2xl border border-gray-200 divide-y divide-gray-200">
+                {/* Phone + Email */}
+                <div className="px-5 py-4 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <a
+                      href="tel:07460856977"
+                      className="text-sm font-bold text-gray-900 hover:text-primary transition-colors block"
+                    >
+                      07460856977
+                    </a>
+                    <a
+                      href={`mailto:${companyInfo.email}`}
+                      className="text-sm text-gray-500 hover:text-primary transition-colors"
+                    >
+                      {companyInfo.email}
+                    </a>
+                  </div>
                 </div>
 
-                <div className="divide-y divide-gray-100">
-                  {/* Phone + Email */}
-                  <div className="px-5 py-4 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                {/* Certifications */}
+                <div className="px-5 py-4">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2.5">
+                    Factory Certifications
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      "ISO",
+                      "WRAP",
+                      "SEDEX",
+                      "OEKOTEX",
+                      "BSCI",
+                      "ACCORD",
+                      "GOTS",
+                    ].map((cert) => (
+                      <span
+                        key={cert}
+                        className="px-2.5 py-1 text-xs font-semibold bg-white border border-gray-200 text-gray-700 rounded-lg"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <a
-                        href="tel:07460856977"
-                        className="text-sm font-bold text-primary hover:underline block"
-                      >
-                        07460856977
-                      </a>
-                      <a
-                        href={`mailto:${companyInfo.email}`}
-                        className="text-sm text-gray-500 hover:text-primary transition-colors"
-                      >
-                        {companyInfo.email}
-                      </a>
-                    </div>
+                        {cert}
+                      </span>
+                    ))}
                   </div>
+                </div>
 
-                  {/* Certifications */}
-                  <div className="px-5 py-4">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2.5">
-                      Factory Certifications
+                {/* UK Office */}
+                <div className="px-5 py-4 flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">
+                      UK Office
                     </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {[
-                        "ISO",
-                        "WRAP",
-                        "SEDEX",
-                        "OEKOTEX",
-                        "BSCI",
-                        "ACCORD",
-                        "GOTS",
-                      ].map((cert) => (
-                        <span
-                          key={cert}
-                          className="px-2.5 py-1 text-xs font-semibold bg-primary/[0.07] text-primary rounded"
-                        >
-                          {cert}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* UK Office */}
-                  <div className="px-5 py-4 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">
-                        UK Office
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        {companyInfo.name} Pvt. Ltd, 61a Rockmount Road,
-                        Plumstead, SE18 1LG, London.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Bangladesh Office */}
-                  <div className="px-5 py-4 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg
-                        className="w-4 h-4 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">
-                        Bangladesh Office
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        House 54, Road 9C, Sector 5, Uttara, Dhaka 1230,
-                        Bangladesh.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Registration */}
-                  <div className="px-5 py-3 bg-gray-50">
-                    <p className="text-xs text-gray-400 font-medium">
-                      Amice Registration No: 16336715
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      61a Rockmount Road, Plumstead, SE18 1LG, London.
                     </p>
                   </div>
+                </div>
+
+                {/* Bangladesh Office */}
+                <div className="px-5 py-4 flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg
+                      className="w-4 h-4 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-0.5">
+                      Bangladesh Office
+                    </p>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      House 54, Road 9C, Sector 5, Uttara, Dhaka 1230,
+                      Bangladesh.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Registration */}
+                <div className="px-5 py-3">
+                  <p className="text-xs text-gray-400 font-medium">
+                    Registration No: 16336715
+                  </p>
                 </div>
               </div>
             </div>
@@ -458,12 +448,34 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={(e) => {
-                            const numeric = e.target.value.replace(/[^0-9+\s\-()]/g, "");
+                            const numeric = e.target.value.replace(
+                              /[^0-9+\s\-()]/g,
+                              "",
+                            );
                             setFormData({ ...formData, phone: numeric });
                           }}
                           onKeyDown={(e) => {
-                            const allowed = ["Backspace", "Delete", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Home", "End", "+", "-", "(", ")", " "];
-                            if (!allowed.includes(e.key) && !/^\d$/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+                            const allowed = [
+                              "Backspace",
+                              "Delete",
+                              "Tab",
+                              "Enter",
+                              "ArrowLeft",
+                              "ArrowRight",
+                              "Home",
+                              "End",
+                              "+",
+                              "-",
+                              "(",
+                              ")",
+                              " ",
+                            ];
+                            if (
+                              !allowed.includes(e.key) &&
+                              !/^\d$/.test(e.key) &&
+                              !e.ctrlKey &&
+                              !e.metaKey
+                            ) {
                               e.preventDefault();
                             }
                           }}
