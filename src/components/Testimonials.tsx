@@ -317,12 +317,12 @@ function TestimonialCard({
 
         {/* Client info */}
         <div className="flex items-center gap-5 h-14">
-          <div className="w-14 h-14 rounded-full overflow-hidden bg-white flex-shrink-0 ring-2 ring-primary/40 shadow-lg shadow-primary/10">
+          <div className="w-14 h-14 rounded-full overflow-hidden bg-white flex-shrink-0 ring-2 ring-primary/40 shadow-lg shadow-primary/10 p-1">
             {logo ? (
               <img
                 src={logo}
                 alt={testimonial.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             ) : (
               <div className="w-full h-full bg-primary/20 flex items-center justify-center text-white font-bold text-xl">
