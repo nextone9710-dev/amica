@@ -1,3 +1,4 @@
+import LazyImage from './LazyImage';
 import schoolUniform from '../assets/images/Amice-School-Uniform-768x512.jpg';
 import corporateUniform from '../assets/images/Amice-Corporate-Uniform.jpg';
 import nurseUniform from '../assets/images/Amice-Nurse-Uniform.jpg';
@@ -47,10 +48,11 @@ export default function Services() {
               className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
+                <LazyImage
                   src={product.image}
                   alt={product.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  wrapperClassName="w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white">

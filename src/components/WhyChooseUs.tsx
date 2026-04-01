@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { companyInfo } from "../data/siteData";
+import LazyImage from "./LazyImage";
 
 import corporateImg from "../assets/images/Amice-Corporate-Uniform.jpg";
 import industrialImg from "../assets/images/Amice-Industries-Workwear.jpg";
@@ -109,6 +110,7 @@ export default function WhyChooseUs() {
           <img
             src={industrialImg}
             alt=""
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
@@ -214,10 +216,11 @@ export default function WhyChooseUs() {
               >
                 <div className="lg:w-1/2">
                   <div className="relative overflow-hidden group">
-                    <img
+                    <LazyImage
                       src={item.image}
                       alt={item.title}
                       className="w-full h-80 lg:h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"
+                      wrapperClassName="w-full"
                     />
                   </div>
                 </div>
@@ -271,50 +274,55 @@ export default function WhyChooseUs() {
 
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="relative overflow-hidden group lg:row-span-2">
-              <img
+              <LazyImage
                 src={corporateImg}
                 alt="Corporate uniforms"
                 className="w-full h-full object-cover min-h-[300px] transition-transform duration-700 group-hover:scale-105"
+                wrapperClassName="w-full h-full min-h-[300px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-semibold text-lg">Corporate</p>
               </div>
             </div>
             <div className="relative overflow-hidden group">
-              <img
+              <LazyImage
                 src={healthcareImg}
                 alt="Healthcare uniforms"
                 className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                wrapperClassName="w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-semibold text-lg">Healthcare</p>
               </div>
             </div>
             <div className="relative overflow-hidden group">
-              <img
+              <LazyImage
                 src={product10}
                 alt="Industrial workwear"
                 className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                wrapperClassName="w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-semibold text-lg">Industrial</p>
               </div>
             </div>
             <div className="relative overflow-hidden group">
-              <img
+              <LazyImage
                 src={industrialImg}
                 alt="Workwear solutions"
                 className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                wrapperClassName="w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-semibold text-lg">Construction</p>
               </div>
             </div>
             <div className="relative overflow-hidden group">
-              <img
+              <LazyImage
                 src={product1}
                 alt="Branded polo"
                 className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                wrapperClassName="w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-semibold text-lg">Hospitality</p>

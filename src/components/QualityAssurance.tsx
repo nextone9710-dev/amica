@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import LazyImage from './LazyImage';
 import { Link } from 'react-router-dom';
 import { companyInfo } from '../data/siteData';
 
@@ -154,10 +155,11 @@ export default function QualityAssurance() {
 
             {/* Image with stat */}
             <div className="relative">
-              <img
+              <LazyImage
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop"
                 alt="Quality inspection process"
-                className="rounded-lg shadow-xl w-full object-cover"
+                className="w-full object-cover"
+                wrapperClassName="rounded-lg shadow-xl overflow-hidden"
               />
               {/* Stat card */}
               <div className="absolute bottom-8 left-8 bg-white rounded-lg shadow-lg p-4 border-l-4 border-primary">

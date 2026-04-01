@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import LazyImage from "./LazyImage";
 import healthcarePdf from "../assets/documents/healthcare.pdf?url";
 import { Link } from "react-router-dom";
 
@@ -200,10 +201,11 @@ export default function Products() {
                 className="group relative overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img
+                  <LazyImage
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    wrapperClassName="w-full h-full"
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
@@ -236,10 +238,11 @@ export default function Products() {
               >
                 <div className="lg:w-1/2 w-full">
                   <div className="relative overflow-hidden group">
-                    <img
+                    <LazyImage
                       src={offering.image}
                       alt={offering.title}
                       className="w-full h-72 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                      wrapperClassName="w-full"
                     />
                   </div>
                 </div>
@@ -277,6 +280,7 @@ export default function Products() {
           <img
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920"
             alt=""
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>

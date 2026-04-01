@@ -110,7 +110,7 @@ export default function Testimonials() {
       {/* Header */}
       <div className="relative text-center mb-10 px-4">
         <h2 className="text-3xl md:text-5xl font-black text-white tracking-wide mb-3">
-          OUR CUSTOMER SPEAK ABOUT US
+          OUR CUSTOMERS SPEAK ABOUT US
         </h2>
         <div className="w-12 h-[2px] bg-primary mx-auto mt-5 rounded-full" />
       </div>
@@ -129,6 +129,7 @@ export default function Testimonials() {
               <img
                 src={logo}
                 alt={name}
+                loading="lazy"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -323,6 +324,7 @@ function TestimonialCard({
               <img
                 src={logo}
                 alt={testimonial.name}
+                loading="lazy"
                 className="w-full h-full object-contain"
               />
             ) : (

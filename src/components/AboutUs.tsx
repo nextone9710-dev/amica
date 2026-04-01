@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { companyInfo } from '../data/siteData';
+import LazyImage from './LazyImage';
 
 import corporateImg from '../assets/images/Amice-Corporate-Uniform.jpg';
 import schoolImg from '../assets/images/Amice-School-Uniform-768x512.jpg';
@@ -107,20 +108,12 @@ export default function AboutUs() {
             <div className="hidden lg:block relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="rounded-2xl overflow-hidden h-48">
-                    <img src={corporateImg} alt="Corporate uniforms" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden h-56">
-                    <img src={nurseImg} alt="Healthcare uniforms" className="w-full h-full object-cover" />
-                  </div>
+                  <LazyImage src={corporateImg} alt="Corporate uniforms" className="w-full h-full object-cover" wrapperClassName="rounded-2xl overflow-hidden h-48" />
+                  <LazyImage src={nurseImg} alt="Healthcare uniforms" className="w-full h-full object-cover" wrapperClassName="rounded-2xl overflow-hidden h-56" />
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="rounded-2xl overflow-hidden h-56">
-                    <img src={schoolImg} alt="School uniforms" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden h-48">
-                    <img src={industrialImg} alt="Industrial workwear" className="w-full h-full object-cover" />
-                  </div>
+                  <LazyImage src={schoolImg} alt="School uniforms" className="w-full h-full object-cover" wrapperClassName="rounded-2xl overflow-hidden h-56" />
+                  <LazyImage src={industrialImg} alt="Industrial workwear" className="w-full h-full object-cover" wrapperClassName="rounded-2xl overflow-hidden h-48" />
                 </div>
               </div>
               {/* Decorative border accent */}
@@ -168,10 +161,11 @@ export default function AboutUs() {
             {/* Left visual */}
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden">
-                <img
+                <LazyImage
                   src={corporateImg}
                   alt="Our commitment to ethical practices"
                   className="w-full h-[28rem] object-cover"
+                  wrapperClassName="w-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
