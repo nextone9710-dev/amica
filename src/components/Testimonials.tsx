@@ -7,6 +7,8 @@ import shakthiLogo from "../assets/images/partners/shakthi.png";
 import veenaLogo from "../assets/images/partners/veena.png";
 import aliBhavanLogo from "../assets/images/partners/alii bhavan.jpeg";
 import polskiLogo from "../assets/images/partners/polski.jpeg";
+import ashtonLogo from "../assets/images/partners/ashton.png";
+import ellalanLogo from "../assets/images/partners/ellalan.png";
 
 const partnerLogos: Record<string, string> = {
   Ganesh: ganeshLogo,
@@ -15,15 +17,19 @@ const partnerLogos: Record<string, string> = {
   Veenas: veenaLogo,
   "ALI BHAVAN": aliBhavanLogo,
   POLSKI: polskiLogo,
+  "Ashton Meadows": ashtonLogo,
+  Ellalan: ellalanLogo,
 };
 
 const partnerRoles: Record<string, string> = {
   Ganesh: "Asian Supermarket",
-  MEGAMART: "Retail Chain",
+  MEGAMART: "Supermarket",
   "Sakthi Supermarkets": "Supermarket Group",
   Veenas: "Restaurant & Store",
-  "ALI BHAVAN": "Restaurant",
+  "ALI BHAVAN": "",
   POLSKI: "Supermarket",
+  "Ashton Meadows": "Care Home",
+  Ellalan: "Retail",
 };
 
 function QuoteOpen({ className }: { className?: string }) {
@@ -279,7 +285,7 @@ function TestimonialCard({
   testimonial: (typeof testimonials)[number];
 }) {
   const logo = partnerLogos[testimonial.name];
-  const role = partnerRoles[testimonial.name] || "Client";
+  const role = partnerRoles[testimonial.name] || "";
 
   return (
     <div className="relative group">
