@@ -10,7 +10,7 @@ import industrialImg from "../assets/images/Amice-Industries-Workwear.jpg";
 
 const stats = [
   { value: "10,000+", label: "Uniforms Delivered" },
-  { value: "6+", label: "Trusted Partners" },
+  { value: "20+", label: "Trusted Partners" },
   { value: "100%", label: "Quality Commitment" },
 ];
 
@@ -31,8 +31,15 @@ const values = [
         />
       </svg>
     ),
-    title: "Quality You Can Trust",
-    description: "Top-grade fabrics and expert craftsmanship you can trust.",
+    title: "Unmatched Quality",
+    description: (
+      <>
+        Premium-grade fabrics built for durability, comfort, and a professional
+        finish. Our <strong>precision embroidery</strong> keeps your logo sharp
+        and consistent across every piece. Built for durability and long-term
+        use.
+      </>
+    ),
   },
   {
     icon: (
@@ -50,11 +57,12 @@ const values = [
         />
       </svg>
     ),
-    title: "Tailored to Your Needs",
+    title: "Fully Customised to Your Brand",
     description: (
       <>
-        Custom branding and <strong>logo embroidery</strong> design options for
-        your needs.
+        From <strong>logo embroidery</strong> to colour matching and garment
+        selection — every detail aligned to your identity. Your brand, your
+        way — no compromises.
       </>
     ),
   },
@@ -74,8 +82,9 @@ const values = [
         />
       </svg>
     ),
-    title: "Reliable",
-    description: "On-time delivery schedules, every single time.",
+    title: "Fast & Reliable Delivery",
+    description:
+      "Our streamlined production ensures your order is completed efficiently without sacrificing quality. You can rely on us to deliver when promised — never miss a deadline again.",
   },
   {
     icon: (
@@ -93,8 +102,9 @@ const values = [
         />
       </svg>
     ),
-    title: "Value for Money",
-    description: "Competitive pricing without compromising quality.",
+    title: "Competitive Pricing",
+    description:
+      "High-quality uniforms should be accessible to every business. Efficient production combined with expert craftsmanship means premium results without premium costs.",
   },
 ];
 
@@ -206,19 +216,17 @@ export default function AboutUs() {
               Our Mission
             </p>
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-              Premium Uniform Solutions
+              Premium Custom Uniforms & Embroidery You Can Rely On
             </h2>
             <div className="w-12 h-[2px] bg-primary mx-auto mb-6 rounded-full" />
             <p className="text-gray-500 text-lg leading-relaxed">
-              With years of experience in the garment industry,{" "}
-              {companyInfo.name} delivers exceptional{" "}
-              <strong>custom uniforms</strong> that combine style, comfort, and
-              durability. Our mission is simple: to provide premium{" "}
-              <strong>UK uniform solutions</strong> that reflect your brand's
-              values and leave a lasting impression. We focus on building
-              long-term partnerships with our clients by offering personalized
-              service, competitive pricing, and reliable on-time delivery—every
-              single time.
+              High-quality garments, expert craftsmanship, and reliable delivery
+              for businesses across the UK. {companyInfo.name} delivers
+              exceptional <strong>custom uniforms</strong> built to reflect your
+              brand and stand the test of daily wear. We focus on building
+              long-term partnerships through personalised service, competitive
+              pricing, and <strong>on-time delivery</strong> — every single
+              time.
             </p>
           </div>
 
@@ -345,18 +353,17 @@ export default function AboutUs() {
       <section className="py-20" style={{ backgroundColor: "#121621" }}>
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-            Ready to Elevate Your Team's Image?
+            Ready to Upgrade Your Team's Look?
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-2xl mx-auto">
-            Get in touch for a free, no-obligation quote. Let's create uniforms
-            your team will be proud to wear.
+            Get a fast, no-obligation quote tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-lg transition-colors uppercase tracking-wide"
             >
-              Get Free Quote
+              Get a Quote
               <svg
                 className="w-5 h-5"
                 fill="none"
