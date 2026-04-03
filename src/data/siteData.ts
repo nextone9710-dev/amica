@@ -142,7 +142,7 @@ export const testimonials = [
   {
     name: "Ashton Meadows",
     content:
-      "Amice has been absolutely fantastic in supplying uniforms for our team at Ashton Meadows. The quality of the <strong>staff tunics and soft shell fleeces</strong> is exceptional—highly durable and very comfortable for long shifts. Their attention to detail with our <strong>custom logo embroidery</strong> is perfect, and the delivery was exactly on time. A highly professional and reliable uniform partner!",
+      "Amice has been absolutely fantastic in supplying uniforms for our team at Ashton Meadows. The quality of the <strong>staff tunics and soft shell fleeces</strong> is exceptional, highly durable and very comfortable for long shifts. Their attention to detail with our <strong>custom logo embroidery</strong> is perfect, and the delivery was exactly on time. A highly professional and reliable uniform partner!",
     rating: 5,
   },
   {
