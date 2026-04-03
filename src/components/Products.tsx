@@ -53,8 +53,24 @@ const previousWork = [
 const offerings = [
   {
     title: "Corporate Wear",
-    description:
-      "Formal shirts, trousers, jackets, and branded polos for a professional look.",
+    description: (
+      <>
+        <p className="mb-4">
+          We provide a complete selection of professional uniforms, including:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Formal shirts (short &amp; long sleeve)</li>
+          <li>Tailored trousers and skirts</li>
+          <li>Blazers and jackets</li>
+          <li>Branded polo shirts</li>
+          <li>Knitwear and layering options</li>
+        </ul>
+        <p>
+          All garments are available with{" "}
+          <strong>custom branding</strong> to match your company identity.
+        </p>
+      </>
+    ),
     image: corporateImg,
   },
   {

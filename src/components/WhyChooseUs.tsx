@@ -13,57 +13,123 @@ import product10 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-04_39
 const reasons = [
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+        />
       </svg>
     ),
     title: "ISO Certified Quality",
-    description: "ISO 9001:2015 certified manufacturing with rigorous quality checks at every stage.",
+    description:
+      "ISO 9001:2015 certified manufacturing with rigorous quality checks at every stage.",
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+        />
       </svg>
     ),
     title: "Custom Branding",
-    description: "Embroidery, printing, and logo placement tailored to your brand identity.",
+    description:
+      "Embroidery, printing, and logo placement tailored to your brand identity.",
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
     title: "Global Reach",
-    description: "Serving businesses across the UK and beyond with reliable, on-time delivery.",
+    description:
+      "Serving businesses across the UK and beyond with reliable, on-time delivery.",
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
     title: "Competitive Pricing",
-    description: "Premium quality uniforms at prices that make sense for your business.",
+    description:
+      "Premium quality uniforms at prices that make sense for your business.",
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
       </svg>
     ),
     title: "Fast Turnaround",
-    description: "Efficient production ensures your uniforms are ready when you need them.",
+    description:
+      "Efficient production ensures your uniforms are ready when you need them.",
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+        />
       </svg>
     ),
     title: "Dedicated Support",
-    description: "A personal account manager to guide you from design to delivery.",
+    description:
+      "A personal account manager to guide you from design to delivery.",
   },
 ];
 
@@ -87,7 +153,7 @@ const story = [
 
 const stats = [
   { value: "500+", label: "Businesses Served" },
-  { value: "50,000+", label: "Uniforms Delivered" },
+  { value: "10,000+", label: "Uniforms Delivered" },
   { value: "15+", label: "Industries Covered" },
   { value: "99%", label: "Client Satisfaction" },
 ];
@@ -126,7 +192,8 @@ export default function WhyChooseUs() {
             <span className="block font-semibold italic">Uniforms</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light">
-            Where every thread speaks professionalism. Uniforms that enhance safety, boost productivity, and strengthen your brand.
+            Where every thread speaks professionalism. Uniforms that enhance
+            safety, boost productivity, and strengthen your brand.
           </p>
         </div>
       </section>
@@ -145,18 +212,36 @@ export default function WhyChooseUs() {
               </h2>
               <div className="w-12 h-1 bg-primary mb-7" />
               <p className="text-gray-600 text-lg leading-relaxed">
-                At {companyInfo.name}, we believe that a <strong>custom UK uniform</strong> is more than just clothing. It is a strategic tool for smarter workplaces. Our <strong>corporate and workwear uniforms</strong> are meticulously designed to enhance operational efficiency, ensure workplace safety, and boost employee productivity. By combining durability, comfort, and functionality, they allow staff to perform at their best while maintaining a professional and cohesive appearance.
+                At {companyInfo.name}, we believe that a{" "}
+                <strong>custom UK uniform</strong> is more than just clothing.
+                It is a strategic tool for smarter workplaces. Our{" "}
+                <strong>corporate and workwear uniforms</strong> are
+                meticulously designed to enhance operational efficiency, ensure
+                workplace safety, and boost employee productivity. By combining
+                durability, comfort, and functionality, they allow staff to
+                perform at their best while maintaining a professional and
+                cohesive appearance.
               </p>
             </div>
 
             {/* Right column — card with border accent */}
             <div className="bg-white border-l-4 border-primary rounded-r-xl shadow-sm p-8 flex flex-col gap-6">
               <p className="text-gray-600 text-lg leading-relaxed">
-                {companyInfo.name} <strong>custom uniforms</strong> also foster team cohesion and a sense of pride, creating a positive and motivating work environment. We understand that smarter living at work means balancing safety, comfort, and efficiency, which is why every design reflects thoughtful attention to employee needs, industry standards, and brand identity.
+                {companyInfo.name} <strong>custom uniforms</strong> also foster
+                team cohesion and a sense of pride, creating a positive and
+                motivating work environment. We understand that smarter living
+                at work means balancing safety, comfort, and efficiency, which
+                is why every design reflects thoughtful attention to employee
+                needs, industry standards, and brand identity.
               </p>
               <div className="w-full h-px bg-gray-100" />
               <p className="text-gray-600 text-lg leading-relaxed">
-                When you choose {companyInfo.name}, you're investing in <strong>premium uniforms</strong> that do more than look professional. They support smarter workflows, empower teams, and strengthen your organisation's reputation. With {companyInfo.name}, your workplace becomes safer, more productive, and truly aligned with your business goals.
+                When you choose {companyInfo.name}, you're investing in{" "}
+                <strong>premium uniforms</strong> that do more than look
+                professional. They support smarter workflows, empower teams, and
+                strengthen your organisation's reputation. With{" "}
+                {companyInfo.name}, your workplace becomes safer, more
+                productive, and truly aligned with your business goals.
               </p>
             </div>
           </div>
@@ -344,7 +429,9 @@ export default function WhyChooseUs() {
             <span className="block font-semibold italic">Team's Image?</span>
           </h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">
-            Get a free, no-obligation quote and discover how {companyInfo.name.toUpperCase()} can transform your workforce's appearance.
+            Get a free, no-obligation quote and discover how{" "}
+            {companyInfo.name.toUpperCase()} can transform your workforce's
+            appearance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

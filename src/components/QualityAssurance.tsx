@@ -40,9 +40,9 @@ const qualityObjectives = [
         />
       </svg>
     ),
-    value: "<1",
-    unit: "%",
-    label: "Defect Rate",
+    value: "< 1%",
+    unit: "",
+    label: "Consistently Under 1% Defect Rate",
   },
   {
     icon: (
@@ -219,7 +219,7 @@ export default function QualityAssurance() {
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors uppercase tracking-wide"
               >
-                Free Quote | Book Appointment
+                Free Quote
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -246,9 +246,9 @@ export default function QualityAssurance() {
               />
               {/* Stat card */}
               <div className="absolute bottom-8 left-8 bg-white rounded-lg shadow-lg p-4 border-l-4 border-primary">
-                <p className="text-4xl font-black text-primary">&lt;1%</p>
+                <p className="text-4xl font-black text-primary">&lt; 1%</p>
                 <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                  Defect Rate
+                  Consistently Under 1% Defect Rate
                 </p>
               </div>
             </div>
@@ -268,7 +268,7 @@ export default function QualityAssurance() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {qualityObjectives.map((obj, index) => (
               <div
                 key={index}
