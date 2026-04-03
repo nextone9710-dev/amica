@@ -18,8 +18,10 @@ import product11 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_20
 import product12 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_23_14-PM.png";
 import product13 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_25_57-PM.png";
 import product14 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_29_21-PM.png";
-import ashtonMale from "../assets/images/products/ashton_male.png";
-import ashtonFemale from "../assets/images/products/ashton_female.png";
+import product15 from "../assets/images/products/ashton_female.png";
+import product16 from "../assets/images/products/ashton_1.jpeg";
+import product17 from "../assets/images/products/ashton_2.jpeg";
+import product18 from "../assets/images/products/ashton_3.jpeg";
 
 // Import category images
 import corporateImg from "../assets/images/Amice-Corporate-Uniform.jpg";
@@ -42,8 +44,10 @@ const previousWork = [
   { image: product12, alt: "Care worker tunic" },
   { image: product13, alt: "Server waistcoat" },
   { image: product14, alt: "Durable workwear jacket" },
-  { image: ashtonMale, alt: "Ashton male uniform" },
-  { image: ashtonFemale, alt: "Ashton female uniform" },
+  { image: product15, alt: "Ashton female uniform" },
+  { image: product16, alt: "Ashton male uniform" },
+  { image: product17, alt: "Ashton black female uniform" },
+  { image: product18, alt: "European female" },
 ];
 
 const offerings = [
@@ -57,7 +61,19 @@ const offerings = [
     title: "Industrial Workwear",
     description: (
       <>
-        Amice Industries Workwear specializes in high-performance <strong>safety wear</strong> and <strong>industrial uniforms</strong> designed to protect workers while ensuring comfort and durability. We provide a wide range of <strong>industrial workwear solutions</strong> including hi-visibility clothing, flame-resistant apparel, coveralls, jackets, and protective gear tailored to meet international safety standards. Every product is crafted with precision, using durable fabrics and advanced manufacturing techniques to withstand demanding environments. Trusted by industries across construction, logistics, healthcare, and manufacturing, Amice Industries guarantees reliable protection without compromising on fit or style. Our mission is to keep your workforce safe, comfortable, and professionally represented at all times.
+        Amice Industries Workwear specializes in high-performance{" "}
+        <strong>safety wear</strong> and <strong>industrial uniforms</strong>{" "}
+        designed to protect workers while ensuring comfort and durability. We
+        provide a wide range of <strong>industrial workwear solutions</strong>{" "}
+        including hi-visibility clothing, flame-resistant apparel, coveralls,
+        jackets, and protective gear tailored to meet international safety
+        standards. Every product is crafted with precision, using durable
+        fabrics and advanced manufacturing techniques to withstand demanding
+        environments. Trusted by industries across construction, logistics,
+        healthcare, and manufacturing, Amice Industries guarantees reliable
+        protection without compromising on fit or style. Our mission is to keep
+        your workforce safe, comfortable, and professionally represented at all
+        times.
       </>
     ),
     image: industrialImg,
@@ -66,7 +82,18 @@ const offerings = [
     title: "Healthcare Uniforms",
     description: (
       <>
-        Amice Nurse Uniform is designed with care, comfort, and functionality in mind, ensuring healthcare professionals can perform their duties with ease and confidence. Our <strong>nurse uniforms and medical scrubs</strong> are made from high quality, breathable fabrics that provide durability, easy maintenance, and all-day comfort. With customisable designs, we offer <strong>scrubs, tunics, lab coats, and medical workwear</strong> tailored to meet hospital and clinic standards. Every detail from fit to fabric choice is carefully crafted to support the demanding routines of nurses while maintaining a professional appearance. Amice ensures healthcare uniforms that combine practicality, hygiene, and style, empowering nurses to deliver the best patient care.
+        Amice Nurse Uniform is designed with care, comfort, and functionality in
+        mind, ensuring healthcare professionals can perform their duties with
+        ease and confidence. Our{" "}
+        <strong>nurse uniforms and medical scrubs</strong> are made from high
+        quality, breathable fabrics that provide durability, easy maintenance,
+        and all-day comfort. With customisable designs, we offer{" "}
+        <strong>scrubs, tunics, lab coats, and medical workwear</strong>{" "}
+        tailored to meet hospital and clinic standards. Every detail from fit to
+        fabric choice is carefully crafted to support the demanding routines of
+        nurses while maintaining a professional appearance. Amice ensures
+        healthcare uniforms that combine practicality, hygiene, and style,
+        empowering nurses to deliver the best patient care.
       </>
     ),
     image: healthcareImg,
@@ -105,7 +132,7 @@ export default function Products() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
         <div className="absolute inset-0 opacity-20">
           <div
@@ -119,16 +146,16 @@ export default function Products() {
         <div
           className={`relative z-10 text-center px-4 max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <p className="text-amber-400 tracking-[0.3em] uppercase text-sm font-medium mb-6">
+          <p className="text-white/60 tracking-[0.3em] uppercase text-sm font-medium mb-4 md:mb-6">
             Premium Uniform Collections
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 md:mb-6 leading-tight">
             Where Every Thread
             <span className="block font-semibold italic">
               Speaks Professionalism
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-6 md:mb-10 font-light">
             Custom branding through embroidery, printing, and logo placement to
             showcase your identity
           </p>
@@ -260,8 +287,18 @@ export default function Products() {
                       download={offering.downloadLabel}
                       className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary text-white font-medium tracking-wide hover:bg-primary-dark transition-colors duration-300"
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"
+                        />
                       </svg>
                       {offering.downloadLabel}
                     </a>
