@@ -61,8 +61,8 @@ const values = [
     description: (
       <>
         From <strong>logo embroidery</strong> to colour matching and garment
-        selection — every detail aligned to your identity. Your brand, your
-        way — no compromises.
+        selection, every detail aligned to your identity. Your brand, your
+        way, no compromises.
       </>
     ),
   },
@@ -84,7 +84,7 @@ const values = [
     ),
     title: "Fast & Reliable Delivery",
     description:
-      "Our streamlined production ensures your order is completed efficiently without sacrificing quality. You can rely on us to deliver when promised — never miss a deadline again.",
+      "Our streamlined production ensures your order is completed efficiently without sacrificing quality. You can rely on us to deliver when promised. Never miss a deadline again.",
   },
   {
     icon: (
@@ -150,7 +150,7 @@ export default function AboutUs() {
               <p className="text-white/60 text-lg leading-relaxed max-w-xl mb-10">
                 With years of experience in the garment industry,{" "}
                 {companyInfo.name} delivers exceptional uniforms that combine
-                style, comfort, and durability — because your team deserves the
+                style, comfort, and durability. Your team deserves the
                 best.
               </p>
 
@@ -225,7 +225,7 @@ export default function AboutUs() {
               exceptional <strong>custom uniforms</strong> built to reflect your
               brand and stand the test of daily wear. We focus on building
               long-term partnerships through personalised service, competitive
-              pricing, and <strong>on-time delivery</strong> — every single
+              pricing, and <strong>on-time delivery</strong>, every single
               time.
             </p>
           </div>

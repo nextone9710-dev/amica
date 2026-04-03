@@ -71,7 +71,7 @@ const story = [
   {
     image: corporateImg,
     title: "Designed for Your Industry",
-    text: "Every uniform we create starts with understanding your industry, your team, and your brand. We don't do one-size-fits-all — we craft solutions specific to your needs.",
+    text: "Every uniform we create starts with understanding your industry, your team, and your brand. We don't do one-size-fits-all. We craft solutions specific to your needs.",
   },
   {
     image: product4,
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
             <span className="block font-semibold italic">Uniforms</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto font-light">
-            Where every thread speaks professionalism — uniforms that enhance safety, boost productivity, and strengthen your brand.
+            Where every thread speaks professionalism. Uniforms that enhance safety, boost productivity, and strengthen your brand.
           </p>
         </div>
       </section>
@@ -145,7 +145,7 @@ export default function WhyChooseUs() {
               </h2>
               <div className="w-12 h-1 bg-primary mb-7" />
               <p className="text-gray-600 text-lg leading-relaxed">
-                At {companyInfo.name}, we believe that a <strong>custom UK uniform</strong> is more than just clothing — it is a strategic tool for smarter workplaces. Our <strong>corporate and workwear uniforms</strong> are meticulously designed to enhance operational efficiency, ensure workplace safety, and boost employee productivity. By combining durability, comfort, and functionality, they allow staff to perform at their best while maintaining a professional and cohesive appearance.
+                At {companyInfo.name}, we believe that a <strong>custom UK uniform</strong> is more than just clothing. It is a strategic tool for smarter workplaces. Our <strong>corporate and workwear uniforms</strong> are meticulously designed to enhance operational efficiency, ensure workplace safety, and boost employee productivity. By combining durability, comfort, and functionality, they allow staff to perform at their best while maintaining a professional and cohesive appearance.
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export default function WhyChooseUs() {
               </p>
               <div className="w-full h-px bg-gray-100" />
               <p className="text-gray-600 text-lg leading-relaxed">
-                When you choose {companyInfo.name}, you're investing in <strong>premium uniforms</strong> that do more than look professional — they support smarter workflows, empower teams, and strengthen your organisation's reputation. With {companyInfo.name}, your workplace becomes safer, more productive, and truly aligned with your business goals.
+                When you choose {companyInfo.name}, you're investing in <strong>premium uniforms</strong> that do more than look professional. They support smarter workflows, empower teams, and strengthen your organisation's reputation. With {companyInfo.name}, your workplace becomes safer, more productive, and truly aligned with your business goals.
               </p>
             </div>
           </div>
