@@ -49,11 +49,11 @@ export default function Hero() {
           <p className="text-white/50 text-sm md:text-base tracking-[0.3em] uppercase mb-4 animate-[fadeSlideDown_0.8s_ease_forwards]" style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>
             {companyInfo.tagline}
           </p>
-          <h2 className="text-4xl md:text-6xl lg:text-[7rem] font-black text-white leading-[1.1] tracking-tight animate-[fadeSlideUp_0.8s_ease_0.2s_both]" style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>
+          <h1 className="text-4xl md:text-6xl lg:text-[7rem] font-black text-white leading-[1.1] tracking-tight animate-[fadeSlideUp_0.8s_ease_0.2s_both]" style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>
             YOU'D LOVE TO
             <br />
             <span className="text-primary">WEAR IT.</span>
-          </h2>
+          </h1>
           <p className="text-white/40 text-lg md:text-2xl mt-4 animate-[fadeSlideUp_0.8s_ease_0.4s_both]" style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.5)' }}>
             And it's a uniform.
           </p>
@@ -79,6 +79,7 @@ export default function Hero() {
     {/* Intro Text Section */}
     <section className="bg-gray-900 py-8 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-white text-2xl md:text-3xl font-bold mb-4">Premium Custom Uniform Manufacturer &amp; Supplier in the UK</h2>
         <p className="text-white/80 text-lg md:text-xl leading-relaxed">
           At <span className="text-primary font-semibold">Amice Pvt Ltd.</span> we know that a <strong className="text-white font-bold">custom uniform in the UK</strong> is more than just clothing it's a symbol of identity, professionalism, and pride. That's why we design and supply high quality <strong className="text-white font-bold">custom uniforms</strong> tailored to your needs. From <strong className="text-white font-bold">corporate wear</strong> to customized branded apparel and <strong className="text-white font-bold">industrial workwear</strong>, we help you create a polished and professional look for your team, every time.
         </p>
