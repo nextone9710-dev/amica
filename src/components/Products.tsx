@@ -418,7 +418,7 @@ export default function Products() {
                 {[
                   "Durable, long-lasting fabrics",
                   "Comfortable fits for all-day wear",
-                  "Easy-care materials — less ironing, easy washing",
+                  "Easy-care materials, less ironing, easy washing",
                   "Professional finish that holds over time",
                 ].map((item) => (
                   <li
