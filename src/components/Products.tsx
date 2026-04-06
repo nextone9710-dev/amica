@@ -66,8 +66,8 @@ const offerings = [
           <li>Knitwear and layering options</li>
         </ul>
         <p>
-          All garments are available with{" "}
-          <strong>custom branding</strong> to match your company identity.
+          All garments are available with <strong>custom branding</strong> to
+          match your company identity.
         </p>
       </>
     ),
@@ -98,18 +98,14 @@ const offerings = [
     title: "Healthcare Uniforms",
     description: (
       <>
-        Amice Nurse Uniform is designed with care, comfort, and functionality in
-        mind, ensuring healthcare professionals can perform their duties with
-        ease and confidence. Our{" "}
-        <strong>nurse uniforms and medical scrubs</strong> are made from high
-        quality, breathable fabrics that provide durability, easy maintenance,
-        and all-day comfort. With customisable designs, we offer{" "}
-        <strong>scrubs, tunics, lab coats, and medical workwear</strong>{" "}
-        tailored to meet hospital and clinic standards. Every detail from fit to
-        fabric choice is carefully crafted to support the demanding routines of
-        nurses while maintaining a professional appearance. Amice ensures
-        healthcare uniforms that combine practicality, hygiene, and style,
-        empowering nurses to deliver the best patient care.
+        We supply <strong>NHS-compliant uniforms</strong> for the National
+        Health Service, as well as private hospitals, clinics, and care homes
+        across the UK. Our range includes{" "}
+        <strong>scrubs, tunics, lab coats, and medical workwear</strong>, all
+        made from high-quality, breathable fabrics that offer durability, easy
+        maintenance, and all-day comfort. Every garment is designed to support
+        the demanding routines of healthcare professionals while maintaining a
+        clean, professional appearance.
       </>
     ),
     image: healthcareImg,
@@ -118,20 +114,76 @@ const offerings = [
   },
   {
     title: "School Uniforms",
-    description:
-      "Smart, durable school wear with custom badges, logos, and embroidery.",
+    description: (
+      <>
+        <p className="mb-4">
+          Smart, durable school wear designed to instil pride, promote equality,
+          and withstand the demands of an active school day. We supply schools
+          across the UK with uniforms that look great from the first day of term
+          to the last.
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Custom badges, crests, and logo embroidery</li>
+          <li>Wide range of sizes for all ages</li>
+          <li>Durable, easy-care fabrics built to last</li>
+          <li>Colour options to match your school identity</li>
+          <li>Bulk ordering with consistent sizing</li>
+        </ul>
+        <p className="mb-4">
+          Whether you need a full uniform set or specific garments, we work
+          closely with schools to deliver a solution that reflects your values
+          and keeps pupils looking their best.
+        </p>
+      </>
+    ),
     image: schoolImg,
   },
   {
     title: "Hospitality Uniforms",
-    description:
-      "Chef coats, aprons, server wear, and front-of-house uniforms for a polished appearance.",
+    description: (
+      <>
+        <p className="mb-4">
+          In hospitality, presentation is everything. Our uniforms help your
+          team make the right first impression, whether they're behind the pass,
+          on the floor, or welcoming guests at the door.
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Chef coats and kitchen wear</li>
+          <li>Aprons for front and back of house</li>
+          <li>Server and waitstaff uniforms</li>
+          <li>Front-of-house and reception wear</li>
+          <li>Custom branding and logo embroidery</li>
+        </ul>
+        <p className="mb-4">
+          From independent restaurants to large hotel groups, we tailor every
+          order to your brand, ensuring a consistent and polished look across
+          your entire team.
+        </p>
+      </>
+    ),
     image: product9,
   },
   {
     title: "Retail Staff Wear",
-    description:
-      "Modern, branded uniforms for retail teams that reflect your store's identity.",
+    description: (
+      <>
+        <p className="mb-4">
+          Modern, branded uniforms for retail teams that reflect your store's
+          identity. Your uniform should reflect your brand clearly and
+          consistently. We offer:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>High-quality logo embroidery</li>
+          <li>Colour matching to your brand guidelines</li>
+          <li>Multiple garment styles and fits</li>
+          <li>Bulk ordering for teams of any size</li>
+        </ul>
+        <p className="mb-4">
+          Whether you need subtle branding or a bold identity, we tailor
+          everything to your requirements.
+        </p>
+      </>
+    ),
     image: product8,
   },
 ];
@@ -322,6 +374,127 @@ export default function Products() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quality & Delivery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide mb-3">
+              Quality &amp; Reliability
+            </h2>
+            <p className="text-gray-500 text-base max-w-xl mx-auto">
+              Every uniform we deliver is built to perform and delivered when
+              promised.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Quality & Comfort */}
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
+                  Built for Daily Wear
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Durable, long-lasting fabrics",
+                  "Comfortable fits for all-day wear",
+                  "Easy-care materials — less ironing, easy washing",
+                  "Professional finish that holds over time",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-gray-600 text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4 text-primary shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Delivery & Reliability */}
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
+                  Fast, Reliable Service
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Quick turnaround times",
+                  "Consistent quality across every order",
+                  "Reliable delivery schedules you can plan around",
+                  "Trusted by businesses across the UK",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-gray-600 text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4 text-primary shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
