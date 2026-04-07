@@ -153,7 +153,7 @@ const story = [
 
 const stats = [
   { value: "500+", label: "Businesses Served" },
-  { value: "10,000+", label: "Uniforms Delivered" },
+  { value: "50,000+", label: "Uniforms Delivered" },
   { value: "15+", label: "Industries Covered" },
   { value: "99%", label: "Client Satisfaction" },
 ];

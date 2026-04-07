@@ -9,8 +9,8 @@ import nurseImg from "../assets/images/Amice-Nurse-Uniform.jpg";
 import industrialImg from "../assets/images/Amice-Industries-Workwear.jpg";
 
 const stats = [
-  { value: "10,000+", label: "Uniforms Delivered" },
-  { value: "20+", label: "Trusted Partners" },
+  { value: "50,000+", label: "Uniforms Delivered" },
+  { value: "50+", label: "Trusted Partners" },
   { value: "100%", label: "Quality Commitment" },
 ];
 
@@ -61,8 +61,8 @@ const values = [
     description: (
       <>
         From <strong>logo embroidery</strong> to colour matching and garment
-        selection, every detail aligned to your identity. Your brand, your
-        way, no compromises.
+        selection, every detail aligned to your identity. Your brand, your way,
+        no compromises.
       </>
     ),
   },
@@ -150,8 +150,7 @@ export default function AboutUs() {
               <p className="text-white/60 text-lg leading-relaxed max-w-xl mb-10">
                 With years of experience in the garment industry,{" "}
                 {companyInfo.name} delivers exceptional uniforms that combine
-                style, comfort, and durability. Your team deserves the
-                best.
+                style, comfort, and durability. Your team deserves the best.
               </p>
 
               {/* Stats row */}
@@ -225,8 +224,7 @@ export default function AboutUs() {
               exceptional <strong>custom uniforms</strong> built to reflect your
               brand and stand the test of daily wear. We focus on building
               long-term partnerships through personalised service, competitive
-              pricing, and <strong>on-time delivery</strong>, every single
-              time.
+              pricing, and <strong>on-time delivery</strong>, every single time.
             </p>
           </div>
 
