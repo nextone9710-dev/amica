@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import LazyImage from "./LazyImage";
+import healthcarePdf from "../assets/documents/healthcare.pdf?url";
 import { Link } from "react-router-dom";
 
 // Import local product images
@@ -16,6 +18,10 @@ import product11 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_20
 import product12 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_23_14-PM.png";
 import product13 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_25_57-PM.png";
 import product14 from "../assets/images/products/ChatGPT-Image-Sep-30-2025-05_29_21-PM.png";
+import product15 from "../assets/images/products/ashton_female.png";
+import product16 from "../assets/images/products/ashton_1.jpeg";
+import product17 from "../assets/images/products/ashton_2.jpeg";
+import product18 from "../assets/images/products/ashton_3.jpeg";
 
 // Import category images
 import corporateImg from "../assets/images/Amice-Corporate-Uniform.jpg";
@@ -38,43 +44,146 @@ const previousWork = [
   { image: product12, alt: "Care worker tunic" },
   { image: product13, alt: "Server waistcoat" },
   { image: product14, alt: "Durable workwear jacket" },
+  { image: product15, alt: "Ashton female uniform" },
+  { image: product16, alt: "Ashton male uniform" },
+  { image: product17, alt: "Ashton black female uniform" },
+  { image: product18, alt: "European female" },
 ];
 
 const offerings = [
   {
     title: "Corporate Wear",
-    description:
-      "Formal shirts, trousers, jackets, and branded polos for a professional look.",
+    description: (
+      <>
+        <p className="mb-4">
+          We provide a complete selection of professional uniforms, including:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Formal shirts (short &amp; long sleeve)</li>
+          <li>Tailored trousers and skirts</li>
+          <li>Blazers and jackets</li>
+          <li>Branded polo shirts</li>
+          <li>Knitwear and layering options</li>
+        </ul>
+        <p>
+          All garments are available with <strong>custom branding</strong> to
+          match your company identity.
+        </p>
+      </>
+    ),
     image: corporateImg,
   },
   {
     title: "Industrial Workwear",
-    description:
-      "High-visibility, durable uniforms for manufacturing, construction, and logistics.",
+    description: (
+      <>
+        Amice Industries Workwear specializes in high-performance{" "}
+        <strong>safety wear</strong> and <strong>industrial uniforms</strong>{" "}
+        designed to protect workers while ensuring comfort and durability. We
+        provide a wide range of <strong>industrial workwear solutions</strong>{" "}
+        including hi-visibility clothing, flame-resistant apparel, coveralls,
+        jackets, and protective gear tailored to meet international safety
+        standards. Every product is crafted with precision, using durable
+        fabrics and advanced manufacturing techniques to withstand demanding
+        environments. Trusted by industries across construction, logistics,
+        healthcare, and manufacturing, Amice Industries guarantees reliable
+        protection without compromising on fit or style. Our mission is to keep
+        your workforce safe, comfortable, and professionally represented at all
+        times.
+      </>
+    ),
     image: industrialImg,
   },
   {
     title: "Healthcare Uniforms",
-    description:
-      "Scrubs, tunics, and medical wear designed for comfort and practicality.",
+    description: (
+      <>
+        We supply <strong>NHS-compliant uniforms</strong> for the National
+        Health Service, as well as private hospitals, clinics, and care homes
+        across the UK. Our range includes{" "}
+        <strong>scrubs, tunics, lab coats, and medical workwear</strong>, all
+        made from high-quality, breathable fabrics that offer durability, easy
+        maintenance, and all-day comfort. Every garment is designed to support
+        the demanding routines of healthcare professionals while maintaining a
+        clean, professional appearance.
+      </>
+    ),
     image: healthcareImg,
+    downloadLink: healthcarePdf,
+    downloadLabel: "Download Healthcare Uniform Catalogue",
   },
   {
     title: "School Uniforms",
-    description:
-      "Smart, durable school wear with custom badges, logos, and embroidery.",
+    description: (
+      <>
+        <p className="mb-4">
+          Smart, durable school wear designed to instil pride, promote equality,
+          and withstand the demands of an active school day. We supply schools
+          across the UK with uniforms that look great from the first day of term
+          to the last.
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Custom badges, crests, and logo embroidery</li>
+          <li>Wide range of sizes for all ages</li>
+          <li>Durable, easy-care fabrics built to last</li>
+          <li>Colour options to match your school identity</li>
+          <li>Bulk ordering with consistent sizing</li>
+        </ul>
+        <p className="mb-4">
+          Whether you need a full uniform set or specific garments, we work
+          closely with schools to deliver a solution that reflects your values
+          and keeps pupils looking their best.
+        </p>
+      </>
+    ),
     image: schoolImg,
   },
   {
     title: "Hospitality Uniforms",
-    description:
-      "Chef coats, aprons, server wear, and front-of-house uniforms for a polished appearance.",
+    description: (
+      <>
+        <p className="mb-4">
+          In hospitality, presentation is everything. Our uniforms help your
+          team make the right first impression, whether they're behind the pass,
+          on the floor, or welcoming guests at the door.
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>Chef coats and kitchen wear</li>
+          <li>Aprons for front and back of house</li>
+          <li>Server and waitstaff uniforms</li>
+          <li>Front-of-house and reception wear</li>
+          <li>Custom branding and logo embroidery</li>
+        </ul>
+        <p className="mb-4">
+          From independent restaurants to large hotel groups, we tailor every
+          order to your brand, ensuring a consistent and polished look across
+          your entire team.
+        </p>
+      </>
+    ),
     image: product9,
   },
   {
     title: "Retail Staff Wear",
-    description:
-      "Modern, branded uniforms for retail teams that reflect your store's identity.",
+    description: (
+      <>
+        <p className="mb-4">
+          Modern, branded uniforms for retail teams that reflect your store's
+          identity. Your uniform should reflect your brand clearly and
+          consistently. We offer:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li>High-quality logo embroidery</li>
+          <li>Colour matching to your brand guidelines</li>
+          <li>Multiple garment styles and fits</li>
+          <li>Bulk ordering for teams of any size</li>
+        </ul>
+        <p className="mb-4">
+          Whether you need subtle branding or a bold identity, we tailor
+          everything to your requirements.
+        </p>
+      </>
+    ),
     image: product8,
   },
 ];
@@ -91,7 +200,7 @@ export default function Products() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
         <div className="absolute inset-0 opacity-20">
           <div
@@ -105,16 +214,16 @@ export default function Products() {
         <div
           className={`relative z-10 text-center px-4 max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          <p className="text-amber-400 tracking-[0.3em] uppercase text-sm font-medium mb-6">
+          <p className="text-white/60 tracking-[0.3em] uppercase text-sm font-medium mb-4 md:mb-6">
             Premium Uniform Collections
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 md:mb-6 leading-tight">
             Where Every Thread
             <span className="block font-semibold italic">
               Speaks Professionalism
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-6 md:mb-10 font-light">
             Custom branding through embroidery, printing, and logo placement to
             showcase your identity
           </p>
@@ -187,10 +296,11 @@ export default function Products() {
                 className="group relative overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img
+                  <LazyImage
                     src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    wrapperClassName="w-full h-full"
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
@@ -223,10 +333,11 @@ export default function Products() {
               >
                 <div className="lg:w-1/2 w-full">
                   <div className="relative overflow-hidden group">
-                    <img
+                    <LazyImage
                       src={offering.image}
                       alt={offering.title}
                       className="w-full h-72 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+                      wrapperClassName="w-full"
                     />
                   </div>
                 </div>
@@ -238,9 +349,152 @@ export default function Products() {
                   <p className="text-gray-600 text-lg leading-relaxed">
                     {offering.description}
                   </p>
+                  {offering.downloadLink && (
+                    <a
+                      href={offering.downloadLink}
+                      download={offering.downloadLabel}
+                      className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary text-white font-medium tracking-wide hover:bg-primary-dark transition-colors duration-300"
+                    >
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"
+                        />
+                      </svg>
+                      {offering.downloadLabel}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quality & Delivery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 uppercase tracking-wide mb-3">
+              Quality &amp; Reliability
+            </h2>
+            <p className="text-gray-500 text-base max-w-xl mx-auto">
+              Every uniform we deliver is built to perform and delivered when
+              promised.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Quality & Comfort */}
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
+                  Built for Daily Wear
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Durable, long-lasting fabrics",
+                  "Comfortable fits for all-day wear",
+                  "Easy-care materials, less ironing, easy washing",
+                  "Professional finish that holds over time",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-gray-600 text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4 text-primary shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Delivery & Reliability */}
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-5 h-5 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
+                  Fast, Reliable Service
+                </h3>
+              </div>
+              <ul className="space-y-3">
+                {[
+                  "Quick turnaround times",
+                  "Consistent quality across every order",
+                  "Reliable delivery schedules you can plan around",
+                  "Trusted by businesses across the UK",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-gray-600 text-sm"
+                  >
+                    <svg
+                      className="w-4 h-4 text-primary shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -252,6 +506,7 @@ export default function Products() {
           <img
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920"
             alt=""
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>

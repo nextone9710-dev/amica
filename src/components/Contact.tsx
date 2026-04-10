@@ -21,18 +21,20 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    const body = new FormData();
-    body.append('form-name', 'contact');
-    body.append('firstName', formData.firstName);
-    body.append('lastName', formData.lastName);
-    body.append('email', formData.email);
-    body.append('phone', formData.phone);
-    body.append('message', formData.message);
+    const body = new URLSearchParams({
+      'form-name': 'contact',
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    });
 
     try {
       const response = await fetch('/', {
         method: 'POST',
-        body,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
       });
 
       if (response.ok) {
@@ -138,7 +140,7 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" data-netlify-honeypot="bot-field" className="space-y-6">
+              <form name="contact" onSubmit={handleSubmit} data-netlify="true" className="space-y-6">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="grid grid-cols-2 gap-6">
                   <div>
@@ -198,8 +200,18 @@ export default function Contact() {
                       id="contact-phone"
                       name="phone"
                       value={formData.phone}
-                      onChange={handleChange}
+                      onChange={(e) => {
+                        const numeric = e.target.value.replace(/[^0-9+\s\-()]/g, "");
+                        setFormData({ ...formData, phone: numeric });
+                      }}
+                      onKeyDown={(e) => {
+                        const allowed = ["Backspace", "Delete", "Tab", "Enter", "ArrowLeft", "ArrowRight", "Home", "End", "+", "-", "(", ")", " "];
+                        if (!allowed.includes(e.key) && !/^\d$/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+                          e.preventDefault();
+                        }
+                      }}
                       required
+                      inputMode="numeric"
                       className="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition placeholder:text-xs placeholder:text-gray-300"
                       placeholder="+44 7xxx xxxxxx"
                     />
