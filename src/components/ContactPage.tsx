@@ -109,17 +109,20 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    const body = new FormData();
-    body.append("firstName", formData.firstName);
-    body.append("lastName", formData.lastName);
-    body.append("email", formData.email);
-    body.append("phone", formData.phone);
-    body.append("message", formData.message);
+    const body = new URLSearchParams({
+      "form-name": "contact",
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    });
 
     try {
-      const response = await fetch("/contact.php", {
+      const response = await fetch("/", {
         method: "POST",
-        body,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
       });
 
       if (response.ok) {
@@ -389,8 +392,10 @@ export default function ContactPage() {
                   <form
                     name="contact"
                     onSubmit={handleSubmit}
+                    data-netlify="true"
                     className="space-y-5 flex flex-col flex-1"
                   >
+                    <input type="hidden" name="form-name" value="contact" />
                     {/* Name Row */}
                     <div className="grid grid-cols-2 gap-4">
                       <div>
