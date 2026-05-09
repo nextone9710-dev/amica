@@ -96,9 +96,9 @@ function usePageMeta() {
     const ogDesc = document.querySelector('meta[property="og:description"]')
     if (ogDesc) ogDesc.setAttribute('content', meta.description)
     const ogUrl = document.querySelector('meta[property="og:url"]')
-    if (ogUrl) ogUrl.setAttribute('content', `https://staging.amice.co.uk${location.pathname}`)
+    if (ogUrl) ogUrl.setAttribute('content', `https://amice.co.uk${location.pathname}`)
     const canonical = document.querySelector('link[rel="canonical"]')
-    if (canonical) canonical.setAttribute('href', `https://staging.amice.co.uk${location.pathname}`)
+    if (canonical) canonical.setAttribute('href', `https://amice.co.uk${location.pathname}`)
   }, [location.pathname])
 }
 
