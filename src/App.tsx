@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-import Header from './components/Header'
 import Hero from './components/Hero'
 import ValueSteps from './components/ValueSteps'
 import AboutUs from './components/AboutUs'
