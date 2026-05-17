@@ -9,6 +9,7 @@ import aliBhavanLogo from "../assets/images/partners/alii bhavan.jpeg";
 import polskiLogo from "../assets/images/partners/polski.jpeg";
 import ashtonLogo from "../assets/images/partners/ashton.png";
 import ellalanLogo from "../assets/images/partners/ellalan.png";
+import BananaLeafLogo from "../assets/images/partners/Banana_Leaf1.png";
 
 const partnerLogos: Record<string, string> = {
   Ganesh: ganeshLogo,
@@ -19,6 +20,7 @@ const partnerLogos: Record<string, string> = {
   POLSKI: polskiLogo,
   "Ashton Meadows": ashtonLogo,
   Ellalan: ellalanLogo,
+  "Banana": BananaLeafLogo,
 };
 
 const partnerRoles: Record<string, string> = {
@@ -30,6 +32,7 @@ const partnerRoles: Record<string, string> = {
   POLSKI: "Supermarket",
   "Ashton Meadows": "Care Home",
   Ellalan: "Retail",
+  "Banana": "Restaurant",
 };
 
 function QuoteOpen({ className }: { className?: string }) {
