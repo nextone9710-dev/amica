@@ -12,6 +12,7 @@ import QualityAssurance from './components/QualityAssurance'
 import WhyChooseUs from './components/WhyChooseUs'
 import ContactPage from './components/ContactPage'
 import Footer from './components/Footer'
+import SideMenu from './components/SideMenu';
 
 const quickLinks = [
   { label: 'Our Products', description: 'Corporate, healthcare, school & more', href: '/products' },
@@ -103,11 +104,50 @@ function usePageMeta() {
 }
 
 function App() {
-  usePageMeta()
+  usePageMeta();
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
+    <>
+      <SideMenu />
+      <header className="hidden md:block fixed top-0 left-0 right-0 z-[60] bg-white shadow-sm">
+  <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
+    <Link to="/" className="flex items-center">
+      <img
+        src="/logo.jpg"
+        alt="Amice"
+        className="h-16 w-auto"
+      />
+    </Link>
+
+    <nav className="flex items-center gap-8 text-[15px] font-semibold text-slate-700">
+      <Link to="/" className="transition-colors hover:text-red-600">
+        Home
+      </Link>
+      <Link to="/about" className="transition-colors hover:text-red-600">
+        About Us
+      </Link>
+      <Link to="/products" className="transition-colors hover:text-red-600">
+        Products
+      </Link>
+      <Link to="/quality" className="transition-colors hover:text-red-600">
+        Quality Assurance
+      </Link>
+      <Link to="/why-us" className="transition-colors hover:text-red-600">
+        Why Choose Us
+      </Link>
+      <Link to="/contact" className="transition-colors hover:text-red-600">
+        Contact
+      </Link>
+    </nav>
+
+    <a
+      href="tel:+440000000000"
+      className="rounded-lg bg-red-600 px-7 py-3 text-base font-bold text-white transition-colors hover:bg-red-700"
+    >
+      Call Now
+    </a>
+  </div>
+</header>
+      <main className="pt-[70px] md:pt-20">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
@@ -117,9 +157,10 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
+
       <Footer />
-    </div>
-  )
+    </>
+  );
 }
 
 export default App
