@@ -140,12 +140,6 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "Ashton Meadows",
-    content:
-      "Amice has been absolutely fantastic in supplying uniforms for our team at Ashton Meadows. The quality of the <strong>staff tunics and soft shell fleeces</strong> is exceptional, highly durable and very comfortable for long shifts. Their attention to detail with our <strong>custom logo embroidery</strong> is perfect, and the delivery was exactly on time. A highly professional and reliable uniform partner!",
-    rating: 5,
-  },
-  {
     name: "Ellalan",
     content:
       "We are extremely impressed with the uniform solutions provided by Amice for Ellalan. They handled our <strong>bulk order</strong> for custom Polo t-shirts and Jackets with great efficiency. The fabric quality is top-notch, the embroidery is flawless, and their pricing is very competitive. Their customer service team is brilliant and responsive. Highly recommended for any UK business!",
