@@ -7,7 +7,6 @@ import shakthiLogo from "../assets/images/partners/shakthi.png";
 import veenaLogo from "../assets/images/partners/veena.png";
 import aliBhavanLogo from "../assets/images/partners/alii bhavan.jpeg";
 import polskiLogo from "../assets/images/partners/polski.jpeg";
-import ashtonLogo from "../assets/images/partners/ashton.png";
 import ellalanLogo from "../assets/images/partners/ellalan.png";
 import BananaLeafLogo from "../assets/images/partners/Banana_Leaf1.png";
 
@@ -18,9 +17,8 @@ const partnerLogos: Record<string, string> = {
   Veenas: veenaLogo,
   "ALI BHAVAN": aliBhavanLogo,
   POLSKI: polskiLogo,
-  "Ashton Meadows": ashtonLogo,
-  Ellalan: ellalanLogo,
-  "Banana": BananaLeafLogo,
+  "Ellalan": ellalanLogo,
+  Banana: BananaLeafLogo,
 };
 
 const partnerRoles: Record<string, string> = {
@@ -30,9 +28,8 @@ const partnerRoles: Record<string, string> = {
   Veenas: "Restaurant & Store",
   "ALI BHAVAN": "",
   POLSKI: "Supermarket",
-  "Ashton Meadows": "Care Home",
-  Ellalan: "Retail",
-  "Banana": "Restaurant",
+  "Ellalan": "Retail",
+  Banana: "Restaurant",
 };
 
 function QuoteOpen({ className }: { className?: string }) {
