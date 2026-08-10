@@ -239,10 +239,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <a
-                      href="tel:07460856977"
+                      href="tel:+447404700727"
                       className="text-sm font-bold text-gray-900 hover:text-primary transition-colors block"
                     >
-                      07460856977
+                      +44 7404 700727
                     </a>
                     <a
                       href={`mailto:${companyInfo.email}`}
