@@ -1,11 +1,11 @@
 export const companyInfo = {
   name: "Amice",
   tagline: "Where Every Thread Speaks Professionalism",
-  phone: "+447460856977",
-  phoneDisplay: "+44 7460 856 977",
+  phone: "+447404700727",
+  phoneDisplay: "+44 7404 700727",
   email: "info@amice.co.uk",
   address: "United Kingdom",
-  whatsapp: "+447460856977",
+  whatsapp: "+447404700727",
 };
 
 export const navLinks = [
