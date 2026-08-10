@@ -20,7 +20,7 @@ const contactMethods = [
     ),
     label: "Call Us",
     value: companyInfo.phoneDisplay,
-    href: `tel:+447460856977`,
+    href: `tel:+447404700727`,
   },
   {
     icon: (
